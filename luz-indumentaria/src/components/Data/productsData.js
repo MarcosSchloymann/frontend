@@ -1,0 +1,40 @@
+export const productsData = [{
+    id:1,
+    price:10,
+    amount:0,
+    price:500,
+    name:"remeras",
+    img:"/img/LOGO-1.png" 
+},
+{
+    id:2,
+    price:10,
+    amount:0,
+    price:50,
+    name:"a",
+    img:"/img/LOGO-1.png"  
+},
+{
+    id:3,
+    price:10,
+    amount:0,
+    price:500,
+    name:"remeras",
+    img:"/img/carro-de-la-compra.png.crdownload" 
+},
+{
+    id:4,
+    price:10,
+    amount:0,
+    price:500,
+    name:"remeras",
+    img:"/img/carro-de-la-compra.png.crdownload" 
+},
+{
+    id:5,
+    price:10,
+    amount:0,
+    price:500,
+    name:"remeras",
+    img:"/img/carro-de-la-compra.png.crdownload" 
+},]
