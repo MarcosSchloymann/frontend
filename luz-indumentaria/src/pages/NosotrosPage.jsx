@@ -7,11 +7,6 @@ function NosotrosPage() {
                 <div className="container  ">
 
                     <div className="row">
-                        {/* <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/enfoque2.jpg" alt=""/>
-          </div>
-        </div> */}
                         <div className="col-md-12">
                             <div className="detail-box">
                                 <div className="heading_container">
@@ -34,9 +29,6 @@ function NosotrosPage() {
                                     <div className="col-md-6"><img src="./img/LOGO-1.png" alt="" height={100}/></div>
                                     <div className="col-md-6"></div>
                                    </div>
-                                   
-                                   
-                                   
                                 </p>
                                 {/* <a href="">
                                     Ver Más

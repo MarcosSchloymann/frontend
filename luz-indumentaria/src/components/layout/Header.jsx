@@ -75,7 +75,9 @@ function Header() {
                     </div>
                 </div>
 
-            </section> </div>
+            </section>
+
+        </div>
     );
 }
 

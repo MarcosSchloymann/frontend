@@ -1,6 +1,8 @@
 import React from "react";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 import { productsData } from "../Data/productsData";
-// import { useContext } from "react";
+
 // import { CartContext } from "../Context/CartContext";
 
 // function ProductoItem({ data, addToCart }) {
@@ -35,6 +37,7 @@ import { productsData } from "../Data/productsData";
 
 
 const ProductItem = () => {
+  const {addItemToCart} = useContext(CartContext)
   return (
     <div  className="row-respons filters-content container food_section ">
       {productsData.map((product, i) => (
@@ -52,7 +55,7 @@ const ProductItem = () => {
                   <h6>
                     $ <span>{product.price}</span>
                   </h6>
-                  <button className="agregar-carrito" onClick={()=>console.log(product)}>
+                  <button className="agregar-carrito" onClick={()=>addItemToCart(product)}>
                     <img src="./img/carro-de-la-compra.png.crdownload" width={25} alt="" />
                   </button>
                 </div>

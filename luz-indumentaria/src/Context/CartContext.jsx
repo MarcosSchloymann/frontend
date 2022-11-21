@@ -1,7 +1,7 @@
 // import { cleanup } from "@testing-library/react";
 import { createContext, useEffect, useState } from "react";
 
-const CartContext = createContext();
+export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState(() => {
@@ -15,7 +15,7 @@ export const CartProvider = ({ children }) => {
 
     useEffect(() => {
         localStorage.setItem('cartProducts', JSON.stringify(cartItems));
-        console.log(cartItems)
+        // console.log(cartItems)
     }, [cartItems]);
 
     const addItemToCart = (product) => {
@@ -32,6 +32,7 @@ export const CartProvider = ({ children }) => {
         } else {
             setCartItems([...cartItems, { ...product, amount: 1 }]);
         }
+    }
 
         const deleteItemToCart = (product) => {
             const inCart = cartItems.find((productInCart) => productInCart.id === product.id
@@ -42,11 +43,12 @@ export const CartProvider = ({ children }) => {
                     cartItems.filter(productInCart => productInCart.id !== product.id)
                 );
             } else {
-                setCartItems((productInCart) => {
+                setCartItems(
+                    cartItems.map((productInCart) => {
                     if (productInCart.id === product.id) {
                         return { ...inCart, amount: inCart.amount - 1 }
                     } else return productInCart
-                });
+                }));
             }
         };
         return (
@@ -56,5 +58,5 @@ export const CartProvider = ({ children }) => {
         )
     };
 
-};
+
 

@@ -3,13 +3,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import CarritoDeCompras from "../../pages/Carrito";
 
 function Navegador() {
     return (
-        <header className="header_section" style={{ backgroundColor: "rgb(184, 181, 181)", }}>
+        <header className="header_section" style={{ backgroundColor: "rgb(121, 121, 121)"}}>
             <Navbar
-                className="header_section navbar custom_nav-container" expand="lg" style={{ backgroundColor: "rgb(184, 181, 181)" }}>
+                className="header_section navbar custom_nav-container" expand="lg" style={{ backgroundColor: "rgb(121, 121, 121)" }}>
                 <Container >
                     <Navbar.Brand href="#home">
                         <span>
@@ -31,7 +30,7 @@ function Navegador() {
                             <li className="nav-item">
                                 <a className="nav-link" href="contacto.html">Contacto</a>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a className="nav-link" href="compra.html">
 
                                     <a className="cart_link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -77,8 +76,8 @@ function Navegador() {
                                         </div>
                                     </div> */}
 
-                                </a>
-                            </li>
+                                {/* </a> */}
+                            {/* </li> */} 
                         </ul>
                     </Navbar.Collapse>
                 </Container>
